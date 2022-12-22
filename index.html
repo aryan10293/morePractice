@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js/main.js" defer></script>
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
-    
+    <section id="main">
+        <h2 id="cityName">Castro Valley</h1>
+        <h1 id="weather">56<span>&#176;</span></h1>
+        <p id="clouds"></p>
+        <p>H:<span id="high">56 <span>&#176;</span> </span> L:<span id="low">42 <span>&#176;</span></span></p>
+    </section>
+    <section id="getCity">
+        <input id="selectCity" type="text" value="castro valley"><br>
+        <input id="selectState" type="text" value="california"><br>
+        <button id="btn">Submit</button>
+    </section>
 </body>
 </html>
