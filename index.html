@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <script type="module" src="./js/main.js" defer></script>
     <title>Weather App</title>
 </head>
 <body>
+    <header>
+        <h1>Aondrejs Weather Application</h1>
+    </header>
     <section id="main">
-        <h2 id="cityName">Castro Valley</h1>
-        <h1 id="weather">56<span>&#176;</span></h1>
+        <h2 id="cityName"></h1>
+        <h2 id="weather"><span class="degree">&#176;</span></h1>
         <p id="clouds"></p>
-        <p>H:<span id="high">56 <span>&#176;</span> </span> L:<span id="low">42 <span>&#176;</span></span></p>
+        <p>H:<span id="high"><span class="degree">&#176;</span> </span> L:<span id="low"><span class="degree">&#176;</span></span></p>
     </section>
     <section id="getCity">
-        <input id="selectCity" type="text" value="castro valley"><br>
-        <input id="selectState" type="text" value="california"><br>
+        <input id="selectCity" type="text" value="" placeholder="Enter city name"><br>
+        <input id="selectState" type="text" value="" placeholder="Enter state or country name"><br>
         <button id="btn">Submit</button>
     </section>
 </body>

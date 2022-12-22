@@ -1,5 +1,11 @@
 export default function getFetch(code){
     const input = document.getElementById('selectCity')
+    const cityName = document.getElementById('cityName')
+    const weather = document.getElementById('weather')
+    const clouds = document.getElementById('clouds')
+    const state = document.getElementById('selectState')
+    const highTemp = document.getElementById('high')
+    const lowTemp = document.getElementById('low')
     const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input.value},${code}&limit=1&appid=663d3a08f32e9604f02ce96ea9ea1bd0`
     let cool = 0
     fetch(url)
@@ -12,7 +18,14 @@ export default function getFetch(code){
                 let temp = parseInt((info['main']['temp'] - 273.15) * 9/5 + 32)
                 let high = parseInt((info['main']['temp_max'] - 273.15) * 9/5 + 32)
                 let low = parseInt((info['main']['temp_min'] - 273.15) * 9/5 + 32)
-                 console.log(temp)
+                cityName.innerText = `${input.value}, ${state.value}`
+                weather.innerText = temp
+                highTemp.innerText = high
+                lowTemp.innerText = low
+                 clouds.innerText = info['weather'][0]['description']
+                state.value = ''
+                input.value = ''
+                console.log(info['weather'][0])
              })
              .catch(err => {
                  console.log(`error ${err}`)
