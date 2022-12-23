@@ -42,7 +42,10 @@ export default function getFetch(code){
              fetch(url2)
              .then(res => res.json()) // parse response as JSON
              .then(info => {
-                console.log(info)
+                 let date = new Date (info['list'][16]['dt_txt'])
+                 date = new String(date)
+                 let day = date.slice(0,3)
+                console.log(day)
              })
              .catch(err => {
                  console.log(`error ${err}`)
