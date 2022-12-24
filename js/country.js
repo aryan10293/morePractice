@@ -21,7 +21,7 @@ export  default function getCodeCountry(){
              .then(res => res.json()) // parse response as JSON
              .then(info => {
                   getFetch(parseInt(info[0]['callingCodes'][0]))
-                  getForecasth(parseInt(isState[0]['code']))
+                  getForecasth(parseInt(info[0]['callingCodes'][0]))
              })
              .catch(err => {
                  console.log(`error ${err}`)
