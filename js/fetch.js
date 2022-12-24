@@ -6,7 +6,7 @@ export default function getFetch(code){
     const state = document.getElementById('selectState')
     const highTemp = document.getElementById('high')
     const lowTemp = document.getElementById('low')
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input.value},${code}&limit=1&appid=663d3a08f32e9604f02ce96ea9ea1bd0`
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input.value},${code}&limit=1&appid=663d3a08f32e9604f02ce96ea9ea1bd0`
     let url2 = 0
     let cool = 0
     fetch(url)

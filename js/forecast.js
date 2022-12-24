@@ -1,6 +1,6 @@
 export default function getForecast(code){
     const input = document.getElementById('selectCity')
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input.value},${code}&limit=1&appid=663d3a08f32e9604f02ce96ea9ea1bd0`
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input.value},${code}&limit=1&appid=663d3a08f32e9604f02ce96ea9ea1bd0`
     fetch(url)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
