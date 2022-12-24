@@ -1,6 +1,6 @@
 import getCodeCountry from './country.js';
 const btn = document.getElementById('btn')
-btn.addEventListener('click', getCodeCountry())
+btn.addEventListener('click', getCodeCountry)
 
 
 

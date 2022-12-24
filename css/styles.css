@@ -9,8 +9,11 @@ body{
 input{
     width: 200px;
 }
-
+#days{
+    width: 50%;
+    margin: auto;
+}
 #days div{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
