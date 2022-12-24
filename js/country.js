@@ -1,5 +1,6 @@
 import state from './states.json' assert{type: 'json'}
 import getFetch from './fetch.js';
+import getForecast from './forecast.js';
 export  default function getCodeCountry(){
     function isStateCountry(){
         const idk = document.getElementById('selectState')
@@ -12,6 +13,7 @@ export  default function getCodeCountry(){
          //console.log(isState)
          if(isState.length === 1){
             getFetch(parseInt(isState[0]['code']))
+            getForecast(parseInt(isState[0]['code']))
          } else {
              isCountry = idk.value
              let url = `https://restcountries.com/v2/name/${idk.value}`
@@ -19,6 +21,7 @@ export  default function getCodeCountry(){
              .then(res => res.json()) // parse response as JSON
              .then(info => {
                   getFetch(parseInt(info[0]['callingCodes'][0]))
+                  getForecasth(parseInt(isState[0]['code']))
              })
              .catch(err => {
                  console.log(`error ${err}`)
